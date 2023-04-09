@@ -159,6 +159,15 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            if (Input.GetMouseButton(0))
+            {
+                _animator.SetBool("saldırı", true);
+                Debug.Log("saldırdı");
+            }
+            else
+            {
+                _animator.SetBool("saldırı", false);
+            }
         }
 
         private void LateUpdate()
